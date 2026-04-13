@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-Fetch | 超高画質YouTubeサムネイル抽出ツール</title>
+    <meta name="description" content="YouTubeのURLを貼るだけで最高画質サムネイル（maxresdefault）を一瞬で抽出・保存できるクリエイター向け無料ツール。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="grid-bg"></div>
+    <div class="neon-orb pink"></div>
+    <div class="neon-orb purple"></div>
+    <div class="neon-orb cyan"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">YouTube<span class="flicker">_</span>FETCH <span class="badge">v1.0</span></h1>
+            <p class="tagline">YouTubeのURLを貼るだけで最高画質サムネイルを一瞬で抽出します。</p>
+        </header>
+
+        <main>
+            <div class="input-card glass-morph">
+                <form id="fetch-form" class="fetch-form">
+                    <div class="input-wrapper">
+                        <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=..."
+                            autocomplete="off" required>
+                        <i class="icon-link">🔗</i>
+                    </div>
+                    <button type="submit" class="btn-primary" id="fetch-btn">
+                        <span class="btn-text">FETCH THUMBNAIL</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                    <p id="error-message" class="error-text hidden">有効なYouTube URLを入力してください。</p>
+                </form>
+            </div>
+
+            <!-- Result Section -->
+            <div id="result-container" class="result-card glass-morph hidden">
+                <div class="result-header">
+                    <h2>THUMBNAIL <span>READY</span></h2>
+                    <span class="res-badge">HD / 1080p</span>
+                </div>
+
+                <div class="img-wrapper">
+                    <img id="thumbnail-img" src="" alt="Fetched YouTube Thumbnail">
+                    <div class="img-overlay">
+                        <button id="download-btn" class="btn-secondary">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            IMAGE DOWNLOAD
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Affiliate CTA Section -->
+            <aside id="cta-section" class="cta-section hidden">
+                <div class="section-divider">
+                    <div class="line"></div>
+                    <span>LEVEL UP YOUR SKILLS</span>
+                    <div class="line"></div>
+                </div>
+
+                <div class="cta-grid">
+                    <!-- CTA 1: Video Editing Course -->
+                    <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+                        <a href="https://px.a8.net/svt/ejp?a8mat=4B1K5L+24SXTE+428G+BZVU9" rel="nofollow">
+                            <img border="0" width="300" height="250" alt=""
+                                src="https://www25.a8.net/svt/bgt?aid=260413257129&wid=001&eno=01&mid=s00000018952002015000&mc=1"></a>
+                        <img border="0" width="1" height="1"
+                            src="https://www15.a8.net/0.gif?a8mat=4B1K5L+24SXTE+428G+BZVU9" alt="">
+                    </div>
+
+                    <!-- CTA 2: Raw Banner -->
+                    <div style="display: flex; justify-content: center; align-items: center; padding: 20px;">
+                        <a href="https://px.a8.net/svt/ejp?a8mat=4B1K5L+1VVFQQ+4LJQ+5Z6WX" rel="nofollow">
+                            <img border="0" width="300" height="250" alt=""
+                                src="https://www25.a8.net/svt/bgt?aid=260413257114&wid=001&eno=01&mid=s00000021455001004000&mc=1"
+                                style="max-width: 100%; height: auto;"></a>
+                        <img border="0" width="1" height="1"
+                            src="https://www15.a8.net/0.gif?a8mat=4B1K5L+1VVFQQ+4LJQ+5Z6WX" alt="">
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 YT_FETCH. Built for Creators.</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
